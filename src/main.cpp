@@ -13,7 +13,7 @@
  * Lesser General Public License for more details.
  */
 
-#include <QtGui/QApplication>
+#include <QApplication>
 #include <QLocale>
 #include <QTranslator>
 

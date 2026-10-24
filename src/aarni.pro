@@ -1,6 +1,9 @@
 # -------------------------------------------------
 # Project created by QtCreator 2009-09-16T17:23:22
 # -------------------------------------------------
+QT += core gui widgets
+CONFIG += c++17
+
 TARGET = aarni
 TEMPLATE = app
 SOURCES += main.cpp \

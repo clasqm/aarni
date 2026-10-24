@@ -99,7 +99,7 @@ void Encryptor::run()
 // Prepare the key from the password.
 void Encryptor::prepareKey()
 {
-    sha_.update(param_.password_.toAscii());
+    sha_.update(param_.password_.toUtf8());
     QByteArray out;
     sha_.digest(out);
 
@@ -169,7 +169,7 @@ void Encryptor::encrypt()
         tmp = qToLittleEndian<quint64>(directory_[i].length_);
         buf1.append((char*)&tmp, 8);
 
-        tmp = qToLittleEndian<quint64>(directory_[i].name_.toAscii().length());
+        tmp = qToLittleEndian<quint64>(directory_[i].name_.toUtf8().length());
         buf1.append((char*)&tmp, 8);
 
         buf1.append(directory_[i].name_);
